@@ -1,0 +1,389 @@
+{
+    "aug": {
+        "single_config": {
+            "image_path": "F:/Project/DA-GUI/image/demo.jpg",
+            "anno_path": "F:\\Project\\DA-GUI\\image\\demo.txt",
+            "dataset_format": "yolo",
+            "index": 0
+        },
+        "batch_config": {
+            "image_dir": "F:\\Project\\DA-GUI\\image",
+            "anno_dir": "F:\\Project\\DA-GUI\\label",
+            "datasets_format": 0,
+            "index": 0
+        },
+        "aug_method": {
+            "advancedblur": {
+                "select": false,
+                "mode": "Oneof",
+                "blur": [
+                    3,
+                    7
+                ],
+                "sigmax": [
+                    0.2,
+                    1.0
+                ],
+                "sigmay": [
+                    0.2,
+                    1.0
+                ],
+                "beta_limit": [
+                    0.5,
+                    8.0
+                ],
+                "noise_limit": [
+                    0.9,
+                    1.1
+                ],
+                "rotate_limit": 90,
+                "p": 0.5
+            },
+            "blur": {
+                "select": false,
+                "mode": "Oneof",
+                "blur_limit": [
+                    2,
+                    3
+                ],
+                "p": 0.5
+            },
+            "defocus": {
+                "select": false,
+                "mode": "Oneof",
+                "radius": [
+                    3,
+                    10
+                ],
+                "alias_blur": [
+                    0.1,
+                    0.5
+                ],
+                "p": 0.5
+            },
+            "guassianblur": {
+                "select": false,
+                "mode": "Oneof",
+                "blur_limit": [
+                    3,
+                    7
+                ],
+                "sigma_limit": [
+                    0.0,
+                    0.0
+                ],
+                "p": 0.5
+            },
+            "GlassBlur": {
+                "select": false,
+                "mode": "Oneof",
+                "sigma": 0.3,
+                "max_delta": 1,
+                "iterations": 2,
+                "mode1": "fast",
+                "p": 0.5
+            },
+            "MedianBlur": {
+                "select": false,
+                "mode": "Oneof",
+                "blur_limit": 7,
+                "p": 0.5
+            },
+            "MotionBlur": {
+                "select": false,
+                "mode": "Compose",
+                "blur_limit": 7,
+                "allow_shifted": true,
+                "p": 0.5
+            },
+            "ZoomBlur": {
+                "select": false,
+                "mode": "Oneof",
+                "max_factor": [
+                    1.0,
+                    1.05
+                ],
+                "step_factor": [
+                    0.01,
+                    0.02
+                ],
+                "p": 0.5
+            },
+            "RandomBrightness": {
+                "select": false,
+                "mode": "Compose",
+                "limit": [
+                    -0.2,
+                    0.2
+                ],
+                "p": 0.5
+            },
+            "RandomBrightnessContrast": {
+                "select": false,
+                "mode": "Compose",
+                "bl": [
+                    -0.4,
+                    0.2
+                ],
+                "cl": [
+                    -0.2,
+                    0.2
+                ],
+                "bbm": true,
+                "p": 0.5
+            },
+            "RandomFog": {
+                "select": false,
+                "mode": "Oneof",
+                "fcl": 0.0,
+                "fcu": 0.3,
+                "ac": 0.08,
+                "p": 0.5
+            },
+            "RandomGamma": {
+                "select": false,
+                "mode": "Compose",
+                "gl": [
+                    50.0,
+                    150.0
+                ],
+                "p": 0.5
+            },
+            "RandomRain": {
+                "select": false,
+                "mode": "Oneof",
+                "sl": -10,
+                "su": 10,
+                "dl": 10,
+                "dw": 1,
+                "dc": [
+                    200,
+                    200
+                ],
+                "bv": 7,
+                "bc": 0.8,
+                "p": 0.5
+            },
+            "RandomShadow": {
+                "select": false,
+                "mode": "Oneof",
+                "sr": [
+                    0.0,
+                    0.0,
+                    1.0,
+                    1.0
+                ],
+                "nsl": 1,
+                "nsu": 2,
+                "sd": 3,
+                "p": 0.5
+            },
+            "RandomSnow": {
+                "select": false,
+                "mode": "Oneof",
+                "spl": 0.0,
+                "spu": 0.2,
+                "bc": 2.5,
+                "p": 0.5
+            },
+            "RandomSunFlare": {
+                "select": false,
+                "mode": "Oneof",
+                "fr": [
+                    0.0,
+                    0.0,
+                    0.1,
+                    0.5
+                ],
+                "al": 0.0,
+                "au": 1.0,
+                "nfcl": 6,
+                "sc": [
+                    255,
+                    255,
+                    255
+                ],
+                "nfcu": 10,
+                "sr": 400,
+                "p": 0.5
+            },
+            "RandomToneCurve": {
+                "select": false,
+                "mode": "Compose",
+                "s": 0.1,
+                "p": 0.5
+            },
+            "RandomCrop": {
+                "select": false,
+                "mode": "Compose",
+                "height": 640,
+                "width": 640,
+                "p": 0.5
+            },
+            "RandomRotate90": {
+                "select": false,
+                "mode": "Compose",
+                "p": 0.5
+            },
+            "RandomResizedCrop": {
+                "select": false,
+                "mode": "Compose",
+                "height": 640,
+                "width": 640,
+                "scale": [
+                    0.08,
+                    1.0
+                ],
+                "ratio": [
+                    0.75,
+                    1.33
+                ],
+                "inter": 1,
+                "p": 0.5
+            },
+            "BBoxSafeRandomCrop": {
+                "select": false,
+                "mode": "Compose",
+                "er": 0.05,
+                "p": 0.5
+            },
+            "RandomCropFromBorders": {
+                "select": false,
+                "mode": "Compose",
+                "cl": 0.1,
+                "cr": 0.1,
+                "ct": 0.1,
+                "cb": 0.1,
+                "p": 0.5
+            },
+            "RandomSizedBBoxSafeCrop": {
+                "select": false,
+                "mode": "Compose",
+                "height": 640,
+                "width": 640,
+                "er": 0.0,
+                "inter": 1,
+                "p": 0.5
+            },
+            "RandomScale": {
+                "select": false,
+                "mode": "Compose",
+                "sl": [
+                    -0.2,
+                    0.2
+                ],
+                "inter": 1,
+                "p": 0.5
+            },
+            "RandomSizedCrop": {
+                "select": false,
+                "mode": "Compose",
+                "mmh": [
+                    0,
+                    1000
+                ],
+                "height": 640,
+                "width": 640,
+                "wr": 1.0,
+                "inter": 1,
+                "p": 0.5
+            },
+            "RandomCropNearBBox": {
+                "select": false,
+                "mode": "Compose",
+                "mps": [
+                    0.0,
+                    0.0
+                ],
+                "p": 0.5
+            },
+            "Crop": {
+                "select": false,
+                "mode": "Compose",
+                "xmi": 0,
+                "ymi": 0,
+                "xma": 1024,
+                "yma": 1024,
+                "p": 0.5
+            },
+            "CenterCrop": {
+                "select": false,
+                "mode": "Compose",
+                "height": 640,
+                "width": 640,
+                "p": 0.5
+            },
+            "CropAndPad": {
+                "select": false,
+                "mode": "Compose",
+                "px": 50,
+                "percent": 0.0,
+                "pm": 0,
+                "pc": 0,
+                "ks": true,
+                "si": true,
+                "inter": 1,
+                "p": 0.5
+            },
+            "Flip": {
+                "select": false,
+                "mode": "Compose",
+                "p": 0.5
+            },
+            "Affine": {
+                "select": false,
+                "mode": "Compose",
+                "scale": [
+                    0.0,
+                    0.0
+                ],
+                "tpe": [
+                    0.0,
+                    0.0
+                ],
+                "tpx": [
+                    0,
+                    0
+                ],
+                "rotate": [
+                    0,
+                    0
+                ],
+                "shear": [
+                    0.0,
+                    0.0
+                ],
+                "inter": 0,
+                "cval": 0,
+                "mod": 0,
+                "p": 0.3
+            },
+            "Resize": {
+                "select": false,
+                "mode": "Compose",
+                "height": 640,
+                "width": 640,
+                "inter": 1,
+                "p": 0.5
+            },
+            "Rotate": {
+                "select": false,
+                "mode": "Compose",
+                "limit": [
+                    -90,
+                    90
+                ],
+                "inter": 1,
+                "bm": 0,
+                "cb": false,
+                "p": 0.5
+            },
+            "Transpose": {
+                "select": false,
+                "mode": "Compose",
+                "p": 0.5
+            }
+        },
+        "aug_lists": "[OneOf([\n  AdvancedBlur(always_apply=False, p=0.5, blur_limit=(3, 7), sigmaX_limit=(0.2, 1.0), sigmaY_limit=(0.2, 1.0), rotate_limit=(-90, 90), beta_limit=(0.5, 8.0), noise_limit=(0.9, 1.1)),\n  GaussianBlur(always_apply=False, p=0.5, blur_limit=(3, 7), sigma_limit=(0.0, 0.0)),\n  GlassBlur(always_apply=False, p=0.5, sigma=0.3, max_delta=1, iterations=2),\n  MedianBlur(always_apply=False, p=0.5, blur_limit=(3, 7)),\n  MotionBlur(always_apply=False, p=0.5, blur_limit=(3, 7), allow_shifted=False),\n  ZoomBlur(always_apply=False, p=0.5, max_factor=(1.0, 1.05), step_factor=(0.01, 0.02)),\n], p=0.5), RandomBrightnessContrast(always_apply=False, p=0.5, brightness_limit=(-0.4, 0.2), contrast_limit=(-0.2, 0.2), brightness_by_max=False), OneOf([\n  RandomFog(always_apply=False, p=0.5, fog_coef_lower=0.0, fog_coef_upper=0.3, alpha_coef=0.08),\n  RandomGamma(always_apply=False, p=0.5, gamma_limit=(50.0, 150.0), eps=None),\n  RandomRain(always_apply=False, p=0.5, slant_lower=-10, slant_upper=10, drop_length=10, drop_width=1, drop_color=[200, 200], blur_value=7, brightness_coefficient=0.8, rain_type=None),\n  RandomShadow(always_apply=False, p=0.5, shadow_roi=[0.0, 0.0, 1.0, 1.0], num_shadows_lower=1, num_shadows_upper=2, shadow_dimension=3),\n  RandomSnow(always_apply=False, p=0.5, snow_point_lower=0.0, snow_point_upper=0.2, brightness_coeff=2.5),\n  RandomSunFlare(always_apply=False, p=0.5, flare_roi=(0.0, 0.0, 0.1, 0.5), angle_lower=0.0, angle_upper=1.0, num_flare_circles_lower=6, num_flare_circles_upper=10, src_radius=400, src_color=[255, 255, 255]),\n], p=0.5), OneOf([\n  Affine(always_apply=False, p=0.3, interpolation=0, mask_interpolation=0, cval=0, mode=0, scale={'x': (0.9, 1.1), 'y': (0.9, 1.1)}, translate_percent={'x': (-0.1, 0.1), 'y': (-0.1, 0.1)}, translate_px=None, rotate=(-15, 15), fit_output=False, shear={'x': (-10, 10), 'y': (-10, 10)}, cval_mask=0, keep_ratio=False),\n  Rotate(always_apply=False, p=0.5, limit=(-180, 180), interpolation=1, border_mode=0, value=None, mask_value=None, rotate_method='largest_box', crop_border=False),\n], p=0.5), OneOf([\n  RandomCropFromBorders(always_apply=False, p=0.5, crop_left=0.1, crop_right=0.1, crop_top=0.1, crop_bottom=0.1),\n  RandomScale(always_apply=False, p=0.5, interpolation=1, scale_limit=(-0.19999999999999996, 0.19999999999999996)),\n], p=0.5), Resize(always_apply=False, p=1.0, height=640, width=640, interpolation=1)]"
+    }
+}
